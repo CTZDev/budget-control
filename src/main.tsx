@@ -3,9 +3,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import BudgetApp from "./BudgetApp.tsx";
 import "./index.css";
+import { ControlBudgetProvider } from "./providers/ControlBudgetProvider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BudgetApp />
+    <ControlBudgetProvider>
+      <BudgetApp />
+    </ControlBudgetProvider>
   </StrictMode>
 );
